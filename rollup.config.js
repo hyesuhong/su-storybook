@@ -3,7 +3,7 @@ import pkg from './package.json' assert { type: 'json' };
 
 // rollup.config.js
 export default {
-	input: 'src/index.js',
+	input: 'src/index.ts',
 	output: [
 		{
 			file: pkg.exports['.'].import,
@@ -17,7 +17,7 @@ export default {
 	plugins: [
 		esbuild({
 			// All options are optional
-			include: /\.jsx?$/, // default, inferred from `loaders` option
+			include: /\.tsx?$/, // default, inferred from `loaders` option
 
 			minify: process.env.NODE_ENV === 'production',
 
