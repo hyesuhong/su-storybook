@@ -1,0 +1,41 @@
+{
+	"name": "su-storybook-ui",
+	"version": "1.0.0",
+	"main": "dist/esm/index.js",
+	"scripts": {
+		"build": "rm -rf dist && rollup -c",
+		"storybook": "storybook dev -p 6006",
+		"build-storybook": "storybook build",
+		"prepack": "npm run build"
+	},
+	"keywords": [],
+	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.js"
+		}
+	},
+	"author": "",
+	"license": "MIT",
+	"description": "wanted storybook chalenge",
+	"devDependencies": {
+		"@storybook/addon-essentials": "^7.0.21",
+		"@storybook/addon-interactions": "^7.0.21",
+		"@storybook/addon-links": "^7.0.21",
+		"@storybook/blocks": "^7.0.21",
+		"@storybook/react": "^7.0.21",
+		"@storybook/react-vite": "^7.0.21",
+		"@storybook/testing-library": "^0.0.14-next.2",
+		"esbuild": "^0.18.4",
+		"prop-types": "^15.8.1",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"rollup": "^3.25.1",
+		"rollup-plugin-esbuild": "^5.0.0",
+		"storybook": "^7.0.21"
+	},
+	"peerDependencies": {
+		"styled-components": "^6.0.1"
+	}
+}
