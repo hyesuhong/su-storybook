@@ -47,7 +47,7 @@ interface IButtonProps {
 	// backgroundColor?: string | null;
 	size?: 'small' | 'medium' | 'large';
 	label: string;
-	disabled: boolean;
+	disabled?: boolean;
 	onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
