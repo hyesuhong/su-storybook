@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "rm -rf dist && rollup -c",
 		"storybook": "storybook dev -p 6006",
-		"build-storybook": "storybook build",
+		"build-storybook": "storybook build -o docs",
 		"prepack": "npm run build"
 	},
 	"keywords": [
@@ -21,9 +21,17 @@
 			"require": "./dist/cjs/index.js"
 		}
 	},
-	"author": "",
+	"author": "Hyesu Hong <honghs95@gmail.com>",
 	"license": "MIT",
-	"description": "wanted storybook chalenge",
+	"description": "UI components with storybook",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hyesuhong/su-storybook-ui.git"
+	},
+	"bugs": {
+		"url": "https://github.com/hyesuhong/su-storybook-ui/issues"
+	},
+	"homepage": "https://github.com/hyesuhong/su-storybook-ui#readme",
 	"devDependencies": {
 		"@storybook/addon-essentials": "^7.0.21",
 		"@storybook/addon-interactions": "^7.0.21",
