@@ -2,9 +2,12 @@ import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
 	// Required
-	framework: '@storybook/react-vite',
+	framework: {
+		name: '@storybook/react-vite',
+		options: {},
+	},
 	stories: [
-		'../src/components/**/*.mdx',
+		// '../src/components/**/*.mdx',
 		'../src/components/**/*.stories.@(js|jsx|ts|tsx)',
 	],
 	// Optional
@@ -16,7 +19,9 @@ const config: StorybookConfig = {
 	docs: {
 		autodocs: 'tag',
 	},
-	// staticDirs: ['../public'],
+	core: {
+		builder: '@storybook/builder-vite',
+	},
 };
 
 export default config;
