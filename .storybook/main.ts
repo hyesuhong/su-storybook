@@ -8,7 +8,11 @@ const config: StorybookConfig = {
 		'../src/components/**/*.stories.@(js|jsx|ts|tsx)',
 	],
 	// Optional
-	addons: ['@storybook/addon-essentials'],
+	addons: [
+		'@storybook/addon-links',
+		'@storybook/addon-essentials',
+		'@storybook/addon-interactions',
+	],
 	docs: {
 		autodocs: 'tag',
 	},
@@ -16,24 +20,3 @@ const config: StorybookConfig = {
 };
 
 export default config;
-
-// /** @type { import('@storybook/react-vite').StorybookConfig } */
-// const config = {
-// 	stories: [
-// 		'../src/components/**/*.mdx',
-// 		'../src/components/**/*.stories.@(js|jsx|ts|tsx)',
-// 	],
-// 	addons: [
-// 		'@storybook/addon-links',
-// 		'@storybook/addon-essentials',
-// 		'@storybook/addon-interactions',
-// 	],
-// 	framework: {
-// 		name: '@storybook/react-vite',
-// 		options: {},
-// 	},
-// 	docs: {
-// 		autodocs: 'tag',
-// 	},
-// };
-// export default config;
