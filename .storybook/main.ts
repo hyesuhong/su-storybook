@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+const path = require('path');
 
 const config: StorybookConfig = {
 	// Required
@@ -21,6 +22,17 @@ const config: StorybookConfig = {
 	},
 	core: {
 		builder: '@storybook/builder-vite',
+	},
+	viteFinal: async (config, { configType }) => {
+		if (!config.resolve) {
+			return config;
+		}
+		config.resolve.alias = {
+			...config.resolve.alias,
+			'@': path.resolve(__dirname, '../src'),
+		};
+
+		return config;
 	},
 };
 
