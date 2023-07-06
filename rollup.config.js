@@ -1,5 +1,4 @@
 import esbuild from 'rollup-plugin-esbuild';
-import typescript from 'rollup-plugin-typescript2';
 import dts from 'rollup-plugin-dts';
 import pkg from './package.json' assert { type: 'json' };
 
@@ -25,7 +24,6 @@ export default [
 
 				jsx: 'automatic', // default, or 'preserve'
 			}),
-			// typescript({ clean: true }),
 		],
 		external: ['react', 'react-dom', 'styled-components'],
 	},
