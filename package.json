@@ -9,7 +9,8 @@
 		"build": "rm -rf dist && rollup -c",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build -o docs",
-		"prepack": "npm run build"
+		"prepack": "npm run build",
+		"chromatic": "dotenv -- cross-var chromatic --project-token=%CHROMATIC_PROJECT_TOKEN%"
 	},
 	"keywords": [
 		"react",
@@ -22,7 +23,10 @@
 			"require": "./dist/cjs/index.js"
 		}
 	},
-	"author": "Hyesu Hong <honghs95@gmail.com>",
+	"author": {
+		"name": "Hyesu Hong",
+		"email": "honghs95@gmail.com"
+	},
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -42,6 +46,9 @@
 		"@storybook/react-vite": "^7.0.26",
 		"@storybook/testing-library": "^0.0.14-next.2",
 		"@vitejs/plugin-react": "^4.0.1",
+		"chromatic": "^6.19.9",
+		"cross-var": "^1.1.0",
+		"dotenv-cli": "^7.2.1",
 		"esbuild": "^0.18.4",
 		"prop-types": "^15.8.1",
 		"react": "^18.2.0",
@@ -55,5 +62,7 @@
 	},
 	"peerDependencies": {
 		"styled-components": "^6.0.1"
-	}
+	},
+	"readme": "ERROR: No README data found!",
+	"_id": "su-storybook-ui@1.1.1"
 }
